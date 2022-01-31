@@ -45,10 +45,8 @@ $posts = [
 
 foreach ($posts as $key => $post) {
    foreach ($post as $date) {
-       echo '<li>' . $key .'</li>';
-       echo '<li>' . $date["title"] .'</li>';
-       echo '<li>' . $date["author"] .'</li>';
-       echo '<li>' . $date["text"] .'</li>';       
+       echo '<li>' . $key ."<br>" . $date["title"] ."<br>" . $date["author"] ."<br>" . $date["text"] ."<br>" .'</li>';
+         
    }
 }
 ?>
