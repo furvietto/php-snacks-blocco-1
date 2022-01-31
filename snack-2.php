@@ -4,7 +4,17 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
 
 if (empty($_GET["name"]) || empty($_GET["mail"]) || empty($_GET["age"])) {
     echo $message = "scrivi qualcosa";
+} else {
+    $name = $_GET["name"];
+    $mail = $_GET["mail"];
+    $age = $_GET["age"];
+    if (strlen($name) > 3 && strpos($mail,'@') && strpos($mail,'.') && is_numeric($age)) {
+      echo $message = "Accesso Riuscito";
+    } else {
+        echo $message = "Accesso Negato";
+    }
 }
+
 ?>
 
 <!DOCTYPE html>
