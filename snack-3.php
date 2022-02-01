@@ -43,12 +43,7 @@ $posts = [
     ],
 ];
 
-foreach ($posts as $key => $post) {
-   foreach ($post as $date) {
-       echo '<li>' . $key ."<br>" . $date["title"] ."<br>" . $date["author"] ."<br>" . $date["text"] ."<br>" .'</li>';
-         
-   }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +55,16 @@ foreach ($posts as $key => $post) {
     <title>Document</title>
 </head>
 <body>
- 
+    <?php 
+        foreach ($posts as $key => $post) {
+            foreach ($post as $date) {
+                echo '<h1>' . $key ."</h1>"; 
+                echo "<div>". $date["title"] ."</div>"; 
+                echo "</div>" . $date["author"] ."</div>" ;
+                echo  "<div>" .$date["text"] . "</div>" ;
+                  
+            }
+         }
+    ?>
 </body>
 </html>

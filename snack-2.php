@@ -8,7 +8,8 @@ if (empty($_GET["name"]) || empty($_GET["mail"]) || empty($_GET["age"])) {
     $name = $_GET["name"];
     $mail = $_GET["mail"];
     $age = $_GET["age"];
-    if (strlen($name) > 3 && strpos($mail,'@') && strpos($mail,'.') && is_numeric($age)) {
+    if (strlen($name) > 3 && strpos($mail,'@') != false && strpos($mail,'.') != false && is_numeric($age)) {
+        // strpos($mail,'@') != false, dato che strpos non restituisce true
       $message = "Accesso Riuscito";
     } else {
         $message = "Accesso Negato";
