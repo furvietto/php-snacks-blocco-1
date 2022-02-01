@@ -7,9 +7,7 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
 
     $array = explode(". " , $paragraph);
 
-    foreach ($array as $value) {
-        echo "<li>". $value ."</li>";
-    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +19,12 @@ Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il pa
     <title>Document</title>
 </head>
 <body>
-
+    <ul>
+        <?php
+        foreach ($array as $value) {
+            echo "<li>". $value ."</li>";
+        }
+        ?>
+    </ul>
 </body>
 </html>
